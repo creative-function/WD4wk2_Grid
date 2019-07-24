@@ -77,8 +77,93 @@ body {
 }
 
 /* 2. Content ================================= */
+section#nav-section {
+	width: 100%;
+	border-bottom: 3px white solid;
+}
+
+section#nav-section .nav-menu {
+	display: -webkit-box;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	        flex-direction: column;
+}
+
+@media (min-width: 992px) {
+	section#nav-section .nav-menu {
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: normal;
+		        flex-direction: row;
+		-webkit-box-pack: justify;
+		        justify-content: space-between;
+	}
+}
+
+section#nav-section .nav-menu .nav-logo {
+	width: 20%;
+	margin: 0 auto;
+}
+
+section#nav-section .nav-menu .nav-logo img {
+	width: 100%;
+}
+
+@media (min-width: 992px) {
+	section#nav-section .nav-menu .nav-logo {
+		width: 10%;
+		margin: 0 0;
+	}
+}
+
+section#nav-section .nav-menu nav {
+	padding: 20px;
+}
+
+section#nav-section .nav-menu nav ul {
+	color: white;
+	text-decoration: none;
+	display: -webkit-box;
+	display: flex;
+	font-family: "Open Sans", sans-serif;
+	-webkit-box-pack: center;
+	        justify-content: center;
+}
+
+section#nav-section .nav-menu nav ul a {
+	padding: 5px;
+	margin: 10px;
+	text-decoration: none;
+}
+
+section#nav-section .nav-menu nav ul a:visited {
+	text-decoration: none;
+	color: #FFFFFF;
+}
+
+section#titleCap .page-title {
+	margin: 0 auto;
+	width: 80%;
+	text-align: center;
+}
+
+section#titleCap .page-title h1 {
+	font-family: "Nunito Sans", sans-serif;
+	font-size: 2.5em;
+	color: #FFFFFF;
+	margin: 5%;
+}
+
+section#titleCap .page-title .snippet {
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.15em;
+	line-height: 1.5em;
+	color: #FFFFFF;
+	padding: 10px;
+}
+
 section#portfolio.layout.layout-portfolio {
-	padding: 90px 0;
+	padding: 20px 0;
 }
 
 section#portfolio.layout.layout-portfolio .container {
@@ -98,12 +183,6 @@ section#portfolio.layout.layout-portfolio .portfolio-grid {
 	        justify-content: space-between;
 }
 
-section#portfolio.layout.layout-portfolio .portfolio-grid::after {
-	content: "";
-	-webkit-box-flex: 1;
-	        flex: auto;
-}
-
 section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
 	width: 100%;
 	text-align: center;
@@ -111,7 +190,6 @@ section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
 	position: relative;
 	padding: 0 15px;
 	height: 275px;
-	background-image: url("/dist/img/dog11.jpg");
 	background-size: cover;
 	-webkit-transition: all 0.2s ease-out;
 	transition: all 0.2s ease-out;
@@ -138,10 +216,58 @@ section#portfolio.layout.layout-portfolio .portfolio-grid .single-project {
 	}
 }
 
+section#portfolio.layout.layout-portfolio .sp-photo1 {
+	background-image: url("/dist/img/dog1.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo2 {
+	background-image: url("/dist/img/dog2.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo3 {
+	background-image: url("/dist/img/dog3.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo4 {
+	background-image: url("/dist/img/dog4.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo5 {
+	background-image: url("/dist/img/dog5.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo6 {
+	background-image: url("/dist/img/dog6.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo7 {
+	background-image: url("/dist/img/dog7.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo8 {
+	background-image: url("/dist/img/dog8.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo9 {
+	background-image: url("/dist/img/dog9.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo10 {
+	background-image: url("/dist/img/dog10.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo11 {
+	background-image: url("/dist/img/dog11.jpg");
+}
+
+section#portfolio.layout.layout-portfolio .sp-photo12 {
+	background-image: url("/dist/img/dog12.jpg");
+}
+
 section#portfolio.layout.layout-portfolio .inner .img-overlay {
 	width: 100%;
 	height: 100%;
-	background-color: rgba(22, 59, 91, 0.35);
+	background-color: rgba(22, 59, 91, 0.5);
 	position: absolute;
 	top: 0;
 	left: 0;
@@ -151,16 +277,37 @@ section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container {
 	position: absolute;
 	top: 50%;
 	left: 0;
+	-webkit-transform: translateY(-50%);
+	    -ms-transform: translateY(-50%);
+	        transform: translateY(-50%);
 	width: 100%;
 	padding: 0 20px;
 	color: #FFFFFF;
+	font-family: "Open Sans", sans-serif;
+	font-size: 1.5em;
 }
 
-section#portfolio.layout.layout-portfolio .inner .img-overlay:hover .project-subtitle {
-	color: yellow;
+section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle {
 	display: block;
-	-webkit-animation: slideDown 2s;
-	        animation: slideDown 2s;
+	color: #ecde4b;
+	font-family: "Nunito Sans", sans-serif;
+}
+
+@media (min-width: 1200px) {
+	section#portfolio.layout.layout-portfolio .inner .img-overlay .text-container .project-subtitle {
+		display: none;
+		margin-top: 10px;
+	}
+}
+
+@media (min-width: 1200px) {
+	section#portfolio.layout.layout-portfolio .inner .img-overlay:hover .project-subtitle {
+		display: block;
+		-webkit-animation: slideDown .3s ease-in-out forwards;
+		        animation: slideDown .3s ease-in-out forwards;
+		-webkit-transition: all;
+		transition: all;
+	}
 }
 
 /* 
@@ -234,19 +381,35 @@ vendor folder for outside libraries and stuff, downloaded assets, icon sets, thi
 pages for .scss pages 
 */
 @-webkit-keyframes slideDown {
-	0% {
-		top: 0;
+	50% {
+		-webkit-transform: scale(5);
+		        transform: scale(5);
+	}
+	90% {
+		-webkit-transform: translateY(70%);
+		        transform: translateY(70%);
+		-webkit-transform: rotate(20deg);
+		        transform: rotate(20deg);
 	}
 	100% {
-		top: -20;
+		-webkit-transform: scale(1.5);
+		        transform: scale(1.5);
 	}
 }
 @keyframes slideDown {
-	0% {
-		top: 0;
+	50% {
+		-webkit-transform: scale(5);
+		        transform: scale(5);
+	}
+	90% {
+		-webkit-transform: translateY(70%);
+		        transform: translateY(70%);
+		-webkit-transform: rotate(20deg);
+		        transform: rotate(20deg);
 	}
 	100% {
-		top: -20;
+		-webkit-transform: scale(1.5);
+		        transform: scale(1.5);
 	}
 }
 
