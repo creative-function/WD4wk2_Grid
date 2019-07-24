@@ -55,8 +55,16 @@ section#nav-section{
 			}
 
 			@media#{$tablet}{
-				width: 10%;
 				margin: 0 0;
+				img{
+					width: 50%;
+				}
+			}
+
+			@media#{$desktop}{
+				img{
+					width: 35%;
+				}
 			}
 			
 		}
@@ -95,7 +103,7 @@ section#titleCap{
 		
 		h1{
 			font-family:$fontNun;
-			font-size: 2.5em;
+			font-size: 3em;
 			color: $gridWhite;
 			margin: 5%;
 		}
@@ -106,6 +114,11 @@ section#titleCap{
 			line-height: 1.5em;
 			color: $gridWhite;
 			padding: 10px;
+
+			@media#{$tablet}{
+				width:50%;
+				margin: 0 auto;
+			}
 
 		}
 	}
@@ -148,17 +161,17 @@ section#portfolio.layout.layout-portfolio{
 			
 			 
 			@media#{$mobile}{
-				width:50%;
+				width:49%;
 				height:250px;
 			}
 		
 			@media#{$tablet}{ 
-				width:30%;
+				width:29%;
 				height:200px;
 			}
 		
 		   @media#{$desktop}{
-				width:25%;
+				width:24%;
 				height:200px;
 			}
 
@@ -341,7 +354,7 @@ pages for .scss pages
 
 
 @keyframes slideDown{
-	50%{transform: scale(5);}
+	50%{transform: scale(2);}
 	90% {transform: translateY(70%);transform: rotate(20deg);}
 	100%{transform: scale(1.5);}
 }
